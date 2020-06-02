@@ -1,6 +1,6 @@
 module.exports = function (config) {
 
-  const useBrowserStack = (proces.env.USE_BROWSER_STACK);
+  const useBrowserStack = (process.env.USE_BROWSER_STACK);
 
   const webpackConfig = require('./webpack.config');
 
