@@ -1,32 +1,40 @@
 module.exports = function (config) {
 
+  const useBrowserStack = (proces.env.USE_BROWSER_STACK);
+
   const webpackConfig = require('./webpack.config');
 
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
-    reporters: ['BrowserStack'],
+    reporters: ['dots'],
     singleRun: true,
     failOnEmptyTestSuite: false,
+    logLevel: config.LOG_INFO,
+    browsers: ['ChromeHeadless'],
 
     // Webpack
     webpack: webpackConfig,
     files: ['src/**/*.ts'],
     preprocessors: {
       'src/**/*.ts': ['webpack']
-    },
-
-    // BrowserStack
-    browserStack: {},
-    customLaunchers: {
-      bs_chrome_mac: {
-        base: 'BrowserStack',
-        browser: 'Chrome',
-        os: 'OS X',
-        os_version: 'Mountain Lion'
-      }
-    },
-    browsers: ['bs_chrome_mac']
+    }
   });
+
+  if (useBrowserStack) {
+    config.set({
+      browserStack: {},
+      customLaunchers: {
+        bs_chrome_mac: {
+          base: 'BrowserStack',
+          browser: 'Chrome',
+          os: 'OS X',
+          os_version: 'Mountain Lion'
+        }
+      },
+      browsers: ['bs_chrome_mac'],
+      reporters: ['dots', 'BrowserStack']
+    });
+  }
 
 };

@@ -18,5 +18,6 @@ jobs:
       - name: Test
         run: npm test
         env:
+          USE_BROWSER_STACK: true
           BROWSER_STACK_ACCESS_KEY: ${{ secrets.BROWSER_STACK_ACCESS_KEY }}
           BROWSER_STACK_USERNAME: ${{ secrets.BROWSER_STACK_USERNAME }}
