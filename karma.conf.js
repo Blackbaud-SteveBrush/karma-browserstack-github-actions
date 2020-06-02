@@ -3,6 +3,7 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
+    reporters: ['BrowserStack'],
     files: ['src/**/*.spec.js'],
     browsers: ['bs_chrome_mac'],
     singleRun: true,
