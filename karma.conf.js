@@ -4,8 +4,17 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: ['src/**/*.spec.js'],
-    browsers: ['ChromeHeadless'],
-    singleRun: true
+    browsers: ['bs_chrome_mac'],
+    singleRun: true,
+    browserStack: {},
+    customLaunchers: {
+      bs_chrome_mac: {
+        base: 'BrowserStack',
+        browser: 'Chrome',
+        os: 'OS X',
+        os_version: 'Mountain Lion'
+      }
+    }
   });
 
 };
