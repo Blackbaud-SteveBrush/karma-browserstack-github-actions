@@ -1,10 +1,10 @@
-module.exports = (config) => {
+module.exports = function (config) {
 
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
     files: ['src/**/*.spec.js'],
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     singleRun: true
   });
 
