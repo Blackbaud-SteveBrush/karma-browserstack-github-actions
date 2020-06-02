@@ -1,12 +1,22 @@
 {
   "name": "karma-browserstack-github-actions",
+  "description": "Sample project to test BrowserStack and Karma.",
+  "repository": {},
+  "license": "MIT",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
     "test": "karma start karma.conf.js"
   },
   "devDependencies": {
+    "@types/jasmine": "3.5.10",
     "jasmine-core": "3.5.0",
     "karma": "5.0.9",
     "karma-browserstack-launcher": "1.6.0",
-    "karma-jasmine": "3.3.1"
+    "karma-jasmine": "3.3.1",
+    "karma-webpack": "4.0.2",
+    "ts-loader": "7.0.5",
+    "typescript": "3.8.3",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11"
   }
 }
