@@ -1,0 +1,13 @@
+{
+  "name": "karma-browserstack-github-actions",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jasmine-core": "3.5.0",
+    "karma": "5.0.9",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-jasmine": "3.3.1"
+  }
+}
