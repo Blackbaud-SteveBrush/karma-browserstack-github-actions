@@ -11,10 +11,9 @@ module.exports = function (config) {
 
     // Webpack
     webpack: webpackConfig,
-    files: ['src/**/*.ts', 'src/**/*.js'],
+    files: ['src/**/*.ts'],
     preprocessors: {
-      'src/**/*.ts': ['webpack'],
-      'src/**/*.js': ['webpack']
+      'src/**/*.ts': ['webpack']
     },
 
     // BrowserStack
