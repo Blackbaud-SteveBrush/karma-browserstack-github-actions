@@ -3,7 +3,6 @@
   "scripts": {
     "test": "karma start karma.conf.js"
   },
-  "type": "module",
   "devDependencies": {
     "jasmine-core": "3.5.0",
     "karma": "5.0.9",
