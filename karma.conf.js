@@ -28,7 +28,7 @@ module.exports = function (config) {
         pattern: specBundle,
         watched: false
       }
-    ],
+    ]
   });
 
   if (useBrowserStack) {

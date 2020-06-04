@@ -9,16 +9,27 @@
     "test:browserstack": "karma start karma.conf.js --browserstack"
   },
   "devDependencies": {
+    "@angular/common": "9.1.9",
+    "@angular/compiler": "9.1.9",
+    "@angular/core": "9.1.9",
+    "@angular/platform-browser": "9.1.9",
+    "@angular/platform-browser-dynamic": "9.1.9",
+    "@types/core-js": "2.5.3",
     "@types/jasmine": "3.5.10",
+    "@types/node": "14.0.10",
+    "core-js": "3.6.5",
     "jasmine-core": "3.5.0",
     "karma": "5.0.9",
     "karma-browserstack-launcher": "1.6.0",
     "karma-chrome-launcher": "3.1.0",
     "karma-jasmine": "3.3.1",
     "karma-webpack": "4.0.2",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.5.5",
     "ts-loader": "7.0.5",
     "typescript": "3.8.3",
     "webpack": "4.43.0",
-    "webpack-cli": "3.3.11"
+    "webpack-cli": "3.3.11",
+    "zone.js": "0.10.3"
   }
 }

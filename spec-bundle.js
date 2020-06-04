@@ -1,3 +1,17 @@
+require('zone.js/dist/zone');
+require('zone.js/dist/zone-testing');
+
+require('reflect-metadata');
+
+const testing = require('@angular/core/testing');
+const browser = require('@angular/platform-browser-dynamic/testing');
+
+// First, initialize the Angular testing environment.
+testing.getTestBed().initTestEnvironment(
+  browser.BrowserDynamicTestingModule,
+  browser.platformBrowserDynamicTesting()
+);
+
 const testContext = require.context(ROOT_DIR, true, /\.spec\.ts/);
 
 // And load the modules.

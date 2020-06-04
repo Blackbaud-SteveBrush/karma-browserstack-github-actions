@@ -4,7 +4,6 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 const srcPath = path.resolve(process.cwd(), 'src');
 
 module.exports = {
-  entry: './src/sample.ts',
   mode: 'development',
   module: {
     rules: [
