@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "test:browserstack": "karma start karma.conf.js --browserstack"
   },
   "devDependencies": {
     "@types/jasmine": "3.5.10",

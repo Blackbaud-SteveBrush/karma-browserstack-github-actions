@@ -1,8 +1,15 @@
 module.exports = function (config) {
 
-  const useBrowserStack = (process.env.USE_BROWSER_STACK);
-
+  const minimist = require('minimist');
   const webpackConfig = require('./webpack.config');
+
+  const argv = minimist(process.argv.slice(2));
+  const useBrowserStack = (argv.browserstack === true);
+
+  const specBundle = `${__dirname}/spec-bundle.js`;
+
+  const preprocessors = {};
+  preprocessors[specBundle] = ['webpack'];
 
   config.set({
     basePath: '',
@@ -15,10 +22,13 @@ module.exports = function (config) {
 
     // Webpack
     webpack: webpackConfig,
-    files: ['src/**/*.ts'],
-    preprocessors: {
-      'src/**/*.ts': ['webpack']
-    }
+    preprocessors,
+    files: [
+      {
+        pattern: specBundle,
+        watched: false
+      }
+    ],
   });
 
   if (useBrowserStack) {
