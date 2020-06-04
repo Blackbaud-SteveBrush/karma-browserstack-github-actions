@@ -10,6 +10,16 @@ module.exports = {
       {
         test: /\.ts$/,
         use: 'ts-loader'
+      },
+
+      {
+        test: /\.s?css$/,
+        use: ['raw-loader', 'sass-loader']
+      },
+
+      {
+        test: /\.html$/,
+        loader: 'raw-loader'
       }
     ]
   },
